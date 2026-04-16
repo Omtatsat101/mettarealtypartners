@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-adsense-account" content="ca-pub-7655879237041224">
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7655879237041224" crossorigin="anonymous"></script>
+<title>Metta Realty Partners — CRE Deal Analysis & Advisory</title>
+<meta name="description" content="Commercial real estate brokerage with free CRE calculators, AI-powered deal analysis, cap rate, DSCR, IRR, and investment advisory tools.">
+<style>
+:root {
+  --bg: #fafaf8;
+  --panel: #ffffff;
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --accent: #1a3a2a;
+  --accent-light: #e8f0eb;
+  --gold: #b8860b;
+  --gold-light: #fdf6e3;
+  --red: #c0392b;
+  --red-light: #fdecea;
+  --line: #e8e6e2;
+  --shadow: 0 2px 8px rgba(0,0,0,0.06);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.12);
+  --radius: 12px;
+  --font: 'Georgia', 'Times New Roman', serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+* { box-sizing: border-box; margin: 0; }
+body { font-family: var(--sans); background: var(--bg); color: var(--ink); }
+
+/* Header */
+.header { background: var(--accent); color: white; padding: 14px 24px; position: sticky; top: 0; z-index: 100; }
+.header-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: var(--font); font-size: 22px; font-weight: 700; letter-spacing: 0.5px; }
+.logo span { color: var(--gold); }
+.nav a { color: rgba(255,255,255,0.8); text-decoration: none; font-size: 13px; margin-left: 20px; letter-spacing: 0.5px; transition: color 0.2s; }
+.nav a:hover { color: white; }
+
+/* Hero */
+.hero { background: linear-gradient(135deg, #0d1f16 0%, #1a3a2a 50%, #2d5a3f 100%); color: white; padding: 72px 24px; text-align: center; }
+.hero h1 { font-family: var(--font); font-size: 48px; font-weight: 700; margin-bottom: 16px; letter-spacing: -0.5px; line-height: 1.2; }
+.hero p { font-size: 18px; opacity: 0.85; max-width: 580px; margin: 0 auto 32px; line-height: 1.6; }
+.hero-stats { display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; }
+.hero-stats .hs { text-align: center; }
+.hero-stats .hs-val { font-family: var(--font); font-size: 34px; font-weight: 700; display: block; color: #fbbf24; }
+.hero-stats .hs-label { font-size: 12px; opacity: 0.6; text-transform: uppercase; letter-spacing: 1px; }
+.hero-cta { display: flex; gap: 12px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
+.btn-gold { background: var(--gold); color: white; border: none; padding: 14px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.2s; text-decoration: none; display: inline-block; }
+.btn-gold:hover { background: #9a7009; }
+.btn-outline { background: transparent; color: white; border: 2px solid rgba(255,255,255,0.5); padding: 12px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; transition: border-color 0.2s; }
+.btn-outline:hover { border-color: white; }
+
+/* Main layout */
+.main { max-width: 1100px; margin: 0 auto; padding: 48px 24px; }
+.section-title { font-family: var(--font); font-size: 28px; margin-bottom: 8px; }
+.section-sub { color: var(--muted); margin-bottom: 28px; font-size: 15px; }
+
+/* Tabs */
+.tabs { display: flex; gap: 4px; background: #eee; border-radius: 10px; padding: 4px; margin-bottom: 28px; flex-wrap: wrap; }
+.tab { padding: 8px 16px; border-radius: 7px; border: none; background: transparent; font-size: 14px; font-weight: 500; cursor: pointer; color: var(--muted); transition: all 0.2s; }
+.tab.active { background: white; color: var(--accent); font-weight: 600; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+
+/* Cards */
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow); }
+.card h3 { font-family: var(--font); font-size: 18px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.card-tag { font-size: 11px; background: var(--gold-light); color: var(--gold); padding: 2px 8px; border-radius: 20px; font-weight: 600; vertical-align: middle; font-family: var(--sans); }
+
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px; }
+.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 48px; }
+
+/* Form fields */
+.fg { margin-bottom: 14px; }
+.fg label { display: block; font-size: 11px; font-weight: 600; color: var(--muted); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+.fg input, .fg select { width: 100%; padding: 10px 14px; border: 1px solid var(--line); border-radius: 8px; font-size: 15px; font-family: var(--sans); transition: border-color 0.2s; background: white; }
+.fg input:focus, .fg select:focus { outline: none; border-color: var(--accent); }
+
+.btn { width: 100%; padding: 12px; background: var(--accent); color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: background 0.2s; }
+.btn:hover { background: #143024; }
+.btn-sm { padding: 8px 16px; font-size: 13px; width: auto; }
+
+/* Results */
+.res { margin-top: 16px; padding: 18px; background: var(--accent-light); border-radius: 8px; display: none; border-left: 3px solid var(--accent); }
+.res.show { display: block; }
+.res.warn { background: #fef9e7; border-left-color: var(--gold); }
+.res.bad { background: var(--red-light); border-left-color: var(--red); }
+.res .rv { font-family: var(--font); font-size: 36px; font-weight: 700; color: var(--accent); }
+.res.warn .rv { color: var(--gold); }
+.res.bad .rv { color: var(--red); }
+.res .rl { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+.res .rd { margin-top: 8px; font-size: 13px; color: #2d6a4a; line-height: 1.8; }
+
+/* Screener */
+.screener { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; margin-bottom: 48px; box-shadow: var(--shadow); }
+.screener-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 20px; }
+.score-bar { height: 8px; background: #e5e5e5; border-radius: 4px; margin: 8px 0; overflow: hidden; }
+.score-fill { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+.score-green { background: #16a34a; }
+.score-yellow { background: #d97706; }
+.score-red { background: #dc2626; }
+.verdict { padding: 20px 24px; border-radius: 10px; margin-top: 20px; display: none; }
+.verdict.go { background: #dcfce7; border: 2px solid #16a34a; }
+.verdict.caution { background: #fef9c3; border: 2px solid #ca8a04; }
+.verdict.nogo { background: #fee2e2; border: 2px solid #dc2626; }
+.verdict h4 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+.verdict p { font-size: 14px; line-height: 1.6; }
+.metric-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.metric-row:last-child { border-bottom: none; }
+.metric-val { font-weight: 600; }
+
+/* Services */
+.service { background: white; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; transition: box-shadow 0.2s; }
+.service:hover { box-shadow: var(--shadow-lg); }
+.service .s-icon { font-size: 28px; margin-bottom: 10px; }
+.service h4 { font-family: var(--font); font-size: 16px; margin-bottom: 6px; }
+.service p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* Contact form */
+.contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 48px; }
+.contact-info h3 { font-family: var(--font); font-size: 22px; margin-bottom: 12px; }
+.contact-info p { color: var(--muted); line-height: 1.7; margin-bottom: 16px; font-size: 15px; }
+.contact-detail { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: 14px; }
+.contact-detail .cd-icon { width: 36px; height: 36px; background: var(--accent-light); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+
+/* Deal submission */
+.deal-submit { background: var(--gold-light); border: 1px solid #e6c96b; border-radius: var(--radius); padding: 28px; }
+.deal-submit h3 { font-family: var(--font); font-size: 18px; margin-bottom: 6px; }
+.deal-submit p { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+
+/* AI Chat Widget */
+.chat-fab { position: fixed; bottom: 28px; right: 28px; z-index: 1000; }
+.chat-btn { width: 60px; height: 60px; background: var(--accent); border-radius: 50%; border: none; color: white; font-size: 24px; cursor: pointer; box-shadow: 0 6px 20px rgba(26,58,42,0.4); transition: transform 0.2s, box-shadow 0.2s; display: flex; align-items: center; justify-content: center; }
+.chat-btn:hover { transform: scale(1.08); box-shadow: 0 10px 28px rgba(26,58,42,0.5); }
+.chat-badge { position: absolute; top: -2px; right: -2px; width: 18px; height: 18px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; color: white; font-weight: 700; }
+.chat-window { position: fixed; bottom: 104px; right: 28px; width: 380px; max-height: 540px; background: white; border-radius: 16px; box-shadow: var(--shadow-lg); z-index: 999; display: none; flex-direction: column; overflow: hidden; border: 1px solid var(--line); }
+.chat-window.open { display: flex; }
+.chat-header { background: var(--accent); color: white; padding: 16px 20px; display: flex; align-items: center; gap: 12px; }
+.chat-avatar { width: 40px; height: 40px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+.chat-header-info { flex: 1; }
+.chat-header-info strong { display: block; font-size: 15px; }
+.chat-header-info span { font-size: 12px; opacity: 0.7; }
+.chat-close { background: none; border: none; color: white; font-size: 20px; cursor: pointer; opacity: 0.7; padding: 4px; }
+.chat-close:hover { opacity: 1; }
+.chat-messages { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; min-height: 200px; }
+.msg { max-width: 85%; }
+.msg-agent { align-self: flex-start; }
+.msg-user { align-self: flex-end; }
+.msg-bubble { padding: 10px 14px; border-radius: 12px; font-size: 14px; line-height: 1.5; }
+.msg-agent .msg-bubble { background: var(--accent-light); color: var(--ink); border-bottom-left-radius: 4px; }
+.msg-user .msg-bubble { background: var(--accent); color: white; border-bottom-right-radius: 4px; }
+.msg-time { font-size: 11px; color: var(--muted); margin-top: 3px; }
+.msg-agent .msg-time { text-align: left; }
+.msg-user .msg-time { text-align: right; }
+.chat-quick { padding: 8px 16px; border-top: 1px solid var(--line); display: flex; gap: 6px; flex-wrap: wrap; }
+.quick-btn { padding: 5px 10px; background: var(--accent-light); color: var(--accent); border: none; border-radius: 20px; font-size: 12px; cursor: pointer; white-space: nowrap; }
+.quick-btn:hover { background: var(--accent); color: white; }
+.chat-input-row { display: flex; gap: 8px; padding: 12px 16px; border-top: 1px solid var(--line); }
+.chat-input { flex: 1; padding: 10px 14px; border: 1px solid var(--line); border-radius: 20px; font-size: 14px; font-family: var(--sans); }
+.chat-input:focus { outline: none; border-color: var(--accent); }
+.chat-send { width: 38px; height: 38px; background: var(--accent); color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.chat-send:hover { background: #143024; }
+.typing { display: flex; gap: 4px; align-items: center; padding: 10px 14px; }
+.typing span { width: 7px; height: 7px; background: var(--muted); border-radius: 50%; animation: bounce 1.4s infinite; }
+.typing span:nth-child(2) { animation-delay: 0.2s; }
+.typing span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-6px); } }
+
+/* IRR Table */
+.irr-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 16px; }
+.irr-table th { background: var(--accent); color: white; padding: 8px 12px; text-align: right; font-size: 12px; font-weight: 600; letter-spacing: 0.3px; }
+.irr-table th:first-child { text-align: left; }
+.irr-table td { padding: 8px 12px; border-bottom: 1px solid var(--line); text-align: right; }
+.irr-table td:first-child { text-align: left; font-weight: 500; }
+.irr-table tr:hover td { background: var(--accent-light); }
+
+/* Sensitivity table */
+.sens-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 16px; }
+.sens-table th, .sens-table td { padding: 8px 10px; text-align: center; border: 1px solid var(--line); }
+.sens-table th { background: var(--accent); color: white; font-size: 12px; }
+.cell-good { background: #dcfce7; color: #15803d; font-weight: 600; }
+.cell-mid { background: #fef9c3; color: #92400e; font-weight: 600; }
+.cell-bad { background: #fee2e2; color: #991b1b; font-weight: 600; }
+
+/* Status indicators */
+.badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600; }
+.badge-green { background: #dcfce7; color: #15803d; }
+.badge-yellow { background: #fef9c3; color: #92400e; }
+.badge-red { background: #fee2e2; color: #991b1b; }
+
+footer { background: var(--accent); color: rgba(255,255,255,0.7); padding: 40px 24px; text-align: center; font-size: 13px; }
+footer strong { color: white; }
+footer a { color: rgba(255,255,255,0.7); text-decoration: none; }
+
+/* FAQ Accordion */
+.faq-section { max-width: 780px; margin: 0 auto 56px; }
+.faq-list { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item:last-child { border-bottom: none; }
+.faq-q { padding: 18px 20px; cursor: pointer; font-weight: 600; font-size: 15px; display: flex; justify-content: space-between; align-items: center; background: white; transition: background 0.15s; user-select: none; }
+.faq-q:hover { background: var(--accent-light); }
+.faq-q.open { background: var(--accent-light); color: var(--accent); }
+.faq-icon { font-size: 20px; font-weight: 400; color: var(--muted); transition: transform 0.2s; }
+.faq-q.open .faq-icon { transform: rotate(45deg); color: var(--accent); }
+.faq-a { display: none; padding: 16px 20px; font-size: 14px; line-height: 1.7; color: var(--muted); background: #fafafa; border-top: 1px solid var(--line); }
+.faq-a.open { display: block; }
+
+/* Formspree contact */
+.fs-form-wrap { background: var(--gold-light); border: 1px solid #e6c96b; border-radius: var(--radius); padding: 28px; }
+.fs-form-wrap h3 { font-family: var(--font); font-size: 18px; margin-bottom: 6px; }
+.fs-form-wrap p { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+.fs-success { display: none; padding: 14px 18px; background: #dcfce7; border: 1px solid #86efac; border-radius: 8px; font-size: 14px; color: #15803d; margin-top: 12px; }
+.fs-success.show { display: block; }
+
+@media (max-width: 768px) {
+  .grid2, .contact-wrap { grid-template-columns: 1fr; }
+  .grid3 { grid-template-columns: 1fr; }
+  .screener-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 { font-size: 30px; }
+  .chat-window { width: calc(100vw - 32px); right: 16px; }
+  .chat-fab { right: 16px; bottom: 16px; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-inner">
+    <div class="logo">Metta <span>Realty</span> Partners</div>
+    <nav class="nav">
+      <a href="#tools">CRE Tools</a>
+      <a href="#screener">Deal Screener</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</div>
+
+<div class="hero">
+  <h1>Commercial Real Estate<br>Done with Integrity</h1>
+  <p>AI-assisted deal analysis, professional CRE calculators, and investment advisory. Free tools for serious investors.</p>
+  <div class="hero-stats">
+    <div class="hs"><span class="hs-val">$2.1T</span><span class="hs-label">US CRE Market 2025</span></div>
+    <div class="hs"><span class="hs-val">6.8%</span><span class="hs-label">Avg Cap Rate</span></div>
+    <div class="hs"><span class="hs-val">1.25x</span><span class="hs-label">Lender DSCR Min</span></div>
+    <div class="hs"><span class="hs-val">Free</span><span class="hs-label">CRE Calculators</span></div>
+  </div>
+  <div class="hero-cta">
+    <a href="#screener" class="btn-gold">Run Deal Screener</a>
+    <a href="#tools" class="btn-outline">View All Tools</a>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- Section: CRE Calculators -->
+  <div id="tools">
+    <h2 class="section-title">Free CRE Calculators</h2>
+    <p class="section-sub">Professional-grade tools for commercial real estate analysis. Results update in real time.</p>
+
+    <div class="tabs" id="calcTabs">
+      <button class="tab active" onclick="switchTab('basic')">Basic Analysis</button>
+      <button class="tab" onclick="switchTab('irr')">IRR & Cash Flow</button>
+      <button class="tab" onclick="switchTab('sensitivity')">Sensitivity Analysis</button>
+    </div>
+
+    <!-- Basic Tab -->
+    <div id="tab-basic">
+      <div class="grid2">
+        <div class="card">
+          <h3>Cap Rate &amp; NOI <span class="card-tag">Most Used</span></h3>
+          <div class="fg"><label>Property Value ($)</label><input type="number" id="crValue" value="1500000" oninput="calcCap()"></div>
+          <div class="fg"><label>Gross Annual Rent ($)</label><input type="number" id="crRent" value="144000" oninput="calcCap()"></div>
+          <div class="fg"><label>Annual Operating Expenses ($)</label><input type="number" id="crExpenses" value="42000" oninput="calcCap()"></div>
+          <div class="fg"><label>Vacancy Rate (%)</label><input type="number" id="crVacancy" value="5" step="0.5" oninput="calcCap()"></div>
+          <div class="res show" id="crRes">
+            <div class="rl">Cap Rate</div>
+            <div class="rv" id="crCap">6.80%</div>
+            <div class="rd" id="crDetails"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Debt Service Coverage Ratio</h3>
+          <div class="fg"><label>Net Operating Income ($)</label><input type="number" id="dsNOI" value="102000" oninput="calcDSCR()"></div>
+          <div class="fg"><label>Loan Amount ($)</label><input type="number" id="dsLoan" value="1000000" oninput="calcDSCR()"></div>
+          <div class="fg"><label>Interest Rate (%)</label><input type="number" id="dsRate" value="6.5" step="0.01" oninput="calcDSCR()"></div>
+          <div class="fg"><label>Loan Term (Years)</label><input type="number" id="dsTerm" value="25" oninput="calcDSCR()"></div>
+          <div class="res show" id="dsRes">
+            <div class="rl">DSCR</div>
+            <div class="rv" id="dsDSCR">1.24x</div>
+            <div class="rd" id="dsDetails"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Cash-on-Cash Return</h3>
+          <div class="fg"><label>Down Payment / Total Cash In ($)</label><input type="number" id="ccInvest" value="400000" oninput="calcCoC()"></div>
+          <div class="fg"><label>Annual Pre-Tax Cash Flow ($)</label><input type="number" id="ccCash" value="36000" oninput="calcCoC()"></div>
+          <div class="fg"><label>Loan Origination / Closing Costs ($)</label><input type="number" id="ccClosing" value="12000" oninput="calcCoC()"></div>
+          <div class="res show" id="ccRes">
+            <div class="rl">Cash-on-Cash Return</div>
+            <div class="rv" id="ccReturn">8.7%</div>
+            <div class="rd" id="ccDetails"></div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Gross Rent Multiplier</h3>
+          <div class="fg"><label>Property Price ($)</label><input type="number" id="grmPrice" value="1500000" oninput="calcGRM()"></div>
+          <div class="fg"><label>Gross Annual Rent ($)</label><input type="number" id="grmRent" value="144000" oninput="calcGRM()"></div>
+          <div class="fg"><label>Property Type</label>
+            <select id="grmType" onchange="calcGRM()">
+              <option value="multifamily">Multifamily</option>
+              <option value="retail">Retail</option>
+              <option value="office">Office</option>
+              <option value="industrial">Industrial</option>
+            </select>
+          </div>
+          <div class="res show" id="grmRes">
+            <div class="rl">GRM</div>
+            <div class="rv" id="grmValue">10.4x</div>
+            <div class="rd" id="grmDetails"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- IRR Tab -->
+    <div id="tab-irr" style="display:none">
+      <div class="grid2">
+        <div class="card">
+          <h3>IRR / Equity Multiple Calculator</h3>
+          <div class="fg"><label>Purchase Price ($)</label><input type="number" id="irrPrice" value="1500000"></div>
+          <div class="fg"><label>Down Payment (%)</label><input type="number" id="irrDown" value="25" step="1"></div>
+          <div class="fg"><label>Hold Period (Years)</label><input type="number" id="irrHold" value="5" min="1" max="30"></div>
+          <div class="fg"><label>Year 1 NOI ($)</label><input type="number" id="irrNOI1" value="102000"></div>
+          <div class="fg"><label>Annual NOI Growth (%)</label><input type="number" id="irrGrowth" value="3" step="0.5"></div>
+          <div class="fg"><label>Exit Cap Rate (%)</label><input type="number" id="irrExitCap" value="7.0" step="0.25"></div>
+          <div class="fg"><label>Interest Rate (%)</label><input type="number" id="irrRate" value="6.5" step="0.1"></div>
+          <div class="fg"><label>Loan Term (Years)</label><input type="number" id="irrTerm" value="25"></div>
+          <button class="btn" onclick="calcIRR()">Calculate IRR &amp; Returns</button>
+        </div>
+        <div class="card">
+          <h3>Projected Cash Flow Schedule</h3>
+          <div id="irrResults">
+            <p style="color:var(--muted);font-size:14px;">Fill in the inputs and click Calculate to see your projected cash flows, IRR, and equity multiple.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sensitivity Tab -->
+    <div id="tab-sensitivity" style="display:none">
+      <div class="card">
+        <h3>Cap Rate Sensitivity Analysis</h3>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">See how cap rate and rent growth assumptions affect your property value and returns.</p>
+        <div class="screener-grid">
+          <div class="fg"><label>Base NOI ($)</label><input type="number" id="sensNOI" value="102000"></div>
+          <div class="fg"><label>Purchase Price ($)</label><input type="number" id="sensPrice" value="1500000"></div>
+          <div class="fg"><label>Hold Period (Years)</label><input type="number" id="sensHold" value="5"></div>
+          <div class="fg"><label>Equity Invested ($)</label><input type="number" id="sensEquity" value="375000"></div>
+        </div>
+        <button class="btn" style="max-width:200px" onclick="calcSensitivity()">Generate Table</button>
+        <div id="sensResults" style="margin-top:20px;overflow-x:auto;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deal Screener -->
+  <div id="screener" style="margin-top:48px">
+    <h2 class="section-title">AI Deal Screener</h2>
+    <p class="section-sub">Enter your deal basics and get an instant go / caution / no-go assessment with key risk flags.</p>
+    <div class="screener">
+      <div class="screener-grid">
+        <div class="fg"><label>Purchase Price ($)</label><input type="number" id="sc-price" value="1500000"></div>
+        <div class="fg"><label>Gross Annual Rent ($)</label><input type="number" id="sc-rent" value="144000"></div>
+        <div class="fg"><label>Annual Operating Expenses ($)</label><input type="number" id="sc-expenses" value="42000"></div>
+        <div class="fg"><label>Vacancy Rate (%)</label><input type="number" id="sc-vacancy" value="5"></div>
+        <div class="fg"><label>Down Payment (%)</label><input type="number" id="sc-down" value="25"></div>
+        <div class="fg"><label>Interest Rate (%)</label><input type="number" id="sc-rate" value="6.5" step="0.1"></div>
+        <div class="fg"><label>Loan Term (Years)</label><input type="number" id="sc-term" value="25"></div>
+        <div class="fg"><label>Property Type</label>
+          <select id="sc-type">
+            <option>Multifamily</option>
+            <option>Retail</option>
+            <option>Office</option>
+            <option>Industrial</option>
+            <option>Mixed Use</option>
+            <option>Net Lease</option>
+          </select>
+        </div>
+      </div>
+      <button class="btn" style="max-width:240px" onclick="runScreener()">Run Deal Screener</button>
+      <div class="verdict" id="verdict">
+        <h4 id="verdict-title"></h4>
+        <p id="verdict-body"></p>
+        <div style="margin-top:16px" id="verdict-metrics"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div id="services">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-sub">Metta means loving-kindness. We practice it in every deal.</p>
+    <div class="grid3">
+      <div class="service"><div class="s-icon">📊</div><h4>Deal Analysis</h4><p>Cap rate, DSCR, IRR, cash-on-cash, and sensitivity analysis for any commercial property. Institutional-quality underwriting.</p></div>
+      <div class="service"><div class="s-icon">🏢</div><h4>Property Valuation</h4><p>Income approach, comparable sales, and replacement cost valuations. Lender-ready reports with full documentation.</p></div>
+      <div class="service"><div class="s-icon">🤝</div><h4>Buyer Representation</h4><p>Off-market deal sourcing, negotiation, and due diligence management. We work for you — not the seller.</p></div>
+      <div class="service"><div class="s-icon">📈</div><h4>Investment Advisory</h4><p>Portfolio strategy, 1031 exchange guidance, and market positioning for commercial real estate investors at any stage.</p></div>
+      <div class="service"><div class="s-icon">🔍</div><h4>Due Diligence</h4><p>Lease audits, rent roll verification, environmental screening, cap ex assessment, and physical inspection coordination.</p></div>
+      <div class="service"><div class="s-icon">📋</div><h4>Market Research</h4><p>Submarket analysis, demographic trends, supply pipeline, and absorption rates for any US metro area.</p></div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <h2 class="section-title" style="text-align:center;margin-bottom:8px">Frequently Asked Questions</h2>
+    <p class="section-sub" style="text-align:center;margin-bottom:24px">CRE investing demystified — straight answers for serious investors.</p>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is a good cap rate in today's market?<span class="faq-icon">+</span></div>
+        <div class="faq-a">In 2025, cap rates have expanded 100–200bps from 2021–22 lows. A 6%+ cap rate is generally solid for residential rentals. For commercial: Multifamily 5–7%, Retail 6–8%, Industrial 5–7%, Office 7–10% (due to vacancy risk). Always compare to your local submarket — cap rates vary significantly by metro and asset class.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What DSCR do lenders require?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Most commercial lenders require a minimum DSCR of 1.25x — meaning the property generates 25% more NOI than required to cover annual debt service. Some lenders will go to 1.20x on strong assets. DSCR below 1.0x means the deal loses money before any equity returns, and no bank will lend. Use our DSCR calculator to test your numbers at different loan terms.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What's the difference between cap rate and cash-on-cash return?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Cap rate is financing-agnostic — it measures the property's income potential relative to value (NOI ÷ Price). Cash-on-cash return measures your actual cash yield on money invested (pre-tax cash flow ÷ cash invested). A deal can have a 7% cap rate but only a 4% cash-on-cash if you're using a high LTV loan at a high interest rate. You need both numbers to understand a deal properly.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How do you calculate IRR on a CRE investment?<span class="faq-icon">+</span></div>
+        <div class="faq-a">IRR (Internal Rate of Return) is the annualized return accounting for all cash flows AND the exit sale, including the time value of money. Typical targets by strategy: Core (6–9%), Core-Plus (9–12%), Value-Add (12–18%), Opportunistic (18%+). Use the IRR tab in our calculator — enter purchase price, down payment, NOI, growth rate, hold period, and exit cap rate to get your projected IRR and equity multiple.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What does your deal analysis service include?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Our full underwriting covers: cap rate, DSCR, cash-on-cash, IRR, equity multiple, sensitivity analysis, comparable sales, submarket analysis, and a go/no-go recommendation with written rationale. We also flag any red flags in the rent roll, expense ratios, or financing structure. Reports are lender-ready and typically delivered within 48 hours of receiving deal details.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Do you work with first-time CRE investors?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. Many of our clients are transitioning from residential investing or buying their first commercial property. We bring institutional-quality analysis to every deal regardless of size. Our free calculators are also available to anyone — no sign-up required. For hands-on guidance, submit a deal inquiry and we'll scope the right level of support for your situation.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is a 1031 exchange and should I use one?<span class="faq-icon">+</span></div>
+        <div class="faq-a">A 1031 exchange lets you defer capital gains tax when selling an investment property by reinvesting into a like-kind property. Key rules: 45 days to identify a replacement, 180 days to close, equal or greater value required, must use a qualified intermediary. It's almost always worth doing if you're selling and planning to reinvest — the tax deferral compounds significantly over time. We can help you evaluate timing and structure.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div id="contact">
+    <h2 class="section-title">Submit a Deal or Get in Touch</h2>
+    <p class="section-sub">We review every inquiry. Serious investors get a response within 24 hours.</p>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>Work with Us</h3>
+        <p>Whether you're buying, analyzing, or need a second opinion on a deal — we bring institutional rigor to every engagement. No minimum deal size.</p>
+        <div class="contact-detail"><div class="cd-icon">📧</div> deals@mettarealtypartners.com</div>
+        <div class="contact-detail"><div class="cd-icon">🌐</div> mettarealtypartners.com</div>
+        <div class="contact-detail"><div class="cd-icon">🏛️</div> A Hariom Tatsat Investments Company</div>
+        <p style="margin-top:16px;font-size:13px;color:var(--muted);">Response time: 24 hours for deal inquiries. Use the AI advisor (💬 bottom right) for instant guidance.</p>
+      </div>
+      <div class="fs-form-wrap">
+        <h3>Quick Deal Submission</h3>
+        <p>Drop your deal basics and we'll follow up with full analysis.</p>
+        <!-- Replace YOUR_FORM_ID with your Formspree form ID after setup at formspree.io -->
+        <form id="deal-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleDealSubmit(event)">
+          <div class="fg"><label>Your Name *</label><input type="text" name="name" placeholder="First Last" required></div>
+          <div class="fg"><label>Email *</label><input type="email" name="email" placeholder="you@company.com" required></div>
+          <div class="fg"><label>Property Address or Description</label><input type="text" name="property" placeholder="123 Main St, Austin TX — 12-unit MF"></div>
+          <div class="fg"><label>Asking Price ($)</label><input type="number" name="asking_price" placeholder="1500000"></div>
+          <div class="fg"><label>What do you need?</label>
+            <select name="service">
+              <option>Full underwriting analysis</option>
+              <option>Buyer representation</option>
+              <option>Second opinion / review</option>
+              <option>Market research</option>
+              <option>Due diligence support</option>
+            </select>
+          </div>
+          <button type="submit" class="btn">Submit Deal →</button>
+        </form>
+        <div class="fs-success" id="deal-success">✅ Received. We'll follow up at your email within 24 hours.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p><strong>Metta Realty Partners</strong> — Commercial Real Estate Brokerage &amp; Advisory</p>
+  <p style="margin-top:8px;">A Hariom Tatsat Investments company &nbsp;|&nbsp; mettarealtypartners.com</p>
+  <p style="margin-top:12px;font-size:11px;opacity:0.5;">Calculators are for informational purposes only and do not constitute financial or investment advice.</p>
+</footer>
+
+<!-- AI Chat Widget -->
+<div class="chat-fab">
+  <div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+      <div class="chat-avatar">🏛️</div>
+      <div class="chat-header-info">
+        <strong>Metta CRE Advisor</strong>
+        <span>AI Deal Analysis Assistant</span>
+      </div>
+      <button class="chat-close" onclick="toggleChat()">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="msg msg-agent">
+        <div class="msg-bubble">Hi! I'm your CRE advisor. I can help you analyze deals, explain metrics like cap rate and DSCR, screen properties, and guide your investment decisions. What are you working on?</div>
+        <div class="msg-time">Now</div>
+      </div>
+    </div>
+    <div class="chat-quick" id="quickBtns">
+      <button class="quick-btn" onclick="quickSend('What is a good cap rate?')">Cap rate?</button>
+      <button class="quick-btn" onclick="quickSend('Explain DSCR')">DSCR?</button>
+      <button class="quick-btn" onclick="quickSend('How do I calculate IRR?')">IRR?</button>
+      <button class="quick-btn" onclick="quickSend('What is a 1031 exchange?')">1031?</button>
+    </div>
+    <div class="chat-input-row">
+      <input class="chat-input" id="chatInput" type="text" placeholder="Ask about any CRE concept..." onkeydown="if(event.key==='Enter')sendChat()">
+      <button class="chat-send" onclick="sendChat()">↑</button>
+    </div>
+  </div>
+  <button class="chat-btn" onclick="toggleChat()" title="CRE Advisor">
+    💬
+    <div class="chat-badge">1</div>
+  </button>
+</div>
+
+<script>
+// ---- Helpers ----
+const fmt = n => '$' + Math.round(n).toLocaleString();
+const pct = n => n.toFixed(2) + '%';
+const fmtX = n => n.toFixed(2) + 'x';
+
+// ---- Tab Switching ----
+function switchTab(name) {
+  ['basic','irr','sensitivity'].forEach(t => {
+    document.getElementById('tab-' + t).style.display = t === name ? '' : 'none';
+  });
+  document.querySelectorAll('.tab').forEach((el, i) => {
+    el.classList.toggle('active', ['basic','irr','sensitivity'][i] === name);
+  });
+}
+
+// ---- Cap Rate (real-time) ----
+function calcCap() {
+  const value = +document.getElementById('crValue').value || 1;
+  const grossRent = +document.getElementById('crRent').value;
+  const expenses = +document.getElementById('crExpenses').value;
+  const vacancy = (+document.getElementById('crVacancy').value) / 100;
+  const effectiveRent = grossRent * (1 - vacancy);
+  const noi = effectiveRent - expenses;
+  const capRate = (noi / value) * 100;
+  const el = document.getElementById('crRes');
+  el.className = 'res show' + (capRate >= 7 ? '' : capRate >= 5 ? ' warn' : ' bad');
+  document.getElementById('crCap').textContent = pct(capRate);
+  document.getElementById('crDetails').innerHTML =
+    `EGI: ${fmt(effectiveRent)} &nbsp;|&nbsp; NOI: ${fmt(noi)}<br>` +
+    (capRate >= 7 ? '✅ Strong — solid cash flow potential' : capRate >= 5 ? '⚠️ Moderate — typical Class A/B market' : '❌ Low cap — appreciation or below-market rents play');
+}
+
+// ---- DSCR (real-time) ----
+function calcDSCR() {
+  const noi = +document.getElementById('dsNOI').value;
+  const loan = +document.getElementById('dsLoan').value || 1;
+  const rate = (+document.getElementById('dsRate').value) / 100 / 12;
+  const n = (+document.getElementById('dsTerm').value) * 12;
+  const payment = loan * (rate * Math.pow(1+rate,n)) / (Math.pow(1+rate,n)-1);
+  const annualDebt = payment * 12;
+  const dscr = noi / annualDebt;
+  const el = document.getElementById('dsRes');
+  el.className = 'res show' + (dscr >= 1.25 ? '' : dscr >= 1.0 ? ' warn' : ' bad');
+  document.getElementById('dsDSCR').textContent = fmtX(dscr);
+  document.getElementById('dsDetails').innerHTML =
+    `Annual Debt Service: ${fmt(annualDebt)} &nbsp;|&nbsp; Monthly: ${fmt(payment)}<br>` +
+    (dscr >= 1.25 ? '✅ Meets most lender requirements (1.25x+)' : dscr >= 1.0 ? '⚠️ Marginal — lenders want 1.25x minimum' : '❌ Below breakeven — deal doesn\'t cash flow');
+}
+
+// ---- Cash-on-Cash (real-time) ----
+function calcCoC() {
+  const invest = (+document.getElementById('ccInvest').value) + (+document.getElementById('ccClosing').value || 0);
+  const cash = +document.getElementById('ccCash').value;
+  const coc = invest > 0 ? (cash / invest) * 100 : 0;
+  const el = document.getElementById('ccRes');
+  el.className = 'res show' + (coc >= 10 ? '' : coc >= 7 ? ' warn' : ' bad');
+  document.getElementById('ccReturn').textContent = pct(coc);
+  document.getElementById('ccDetails').innerHTML =
+    `Total cash invested: ${fmt(invest)}<br>` +
+    (coc >= 10 ? '✅ Excellent — well above CRE average' : coc >= 7 ? '⚠️ Solid — above average, room to improve' : '❌ Below average — consider renegotiating price or financing');
+}
+
+// ---- GRM (real-time) ----
+const grmBenchmarks = { multifamily: {low:6,mid:10,label:'Multifamily'}, retail: {low:8,mid:13,label:'Retail'}, office: {low:9,mid:14,label:'Office'}, industrial: {low:7,mid:11,label:'Industrial'} };
+function calcGRM() {
+  const price = +document.getElementById('grmPrice').value || 1;
+  const rent = +document.getElementById('grmRent').value || 1;
+  const type = document.getElementById('grmType').value;
+  const grm = price / rent;
+  const b = grmBenchmarks[type] || grmBenchmarks.multifamily;
+  const el = document.getElementById('grmRes');
+  el.className = 'res show' + (grm <= b.low ? '' : grm <= b.mid ? ' warn' : ' bad');
+  document.getElementById('grmValue').textContent = fmtX(grm);
+  document.getElementById('grmDetails').innerHTML =
+    `${fmt(price)} ÷ ${fmt(rent)}<br>` +
+    (grm <= b.low ? `✅ Below ${b.low}x — strong value for ${b.label}` : grm <= b.mid ? `⚠️ ${b.low}-${b.mid}x range — typical for ${b.label}` : `❌ Above ${b.mid}x — paying a premium`);
+}
+
+// ---- IRR Calculator ----
+function calcIRR() {
+  const price = +document.getElementById('irrPrice').value;
+  const downPct = +document.getElementById('irrDown').value / 100;
+  const hold = +document.getElementById('irrHold').value;
+  const noi1 = +document.getElementById('irrNOI1').value;
+  const growth = +document.getElementById('irrGrowth').value / 100;
+  const exitCap = +document.getElementById('irrExitCap').value / 100;
+  const rate = +document.getElementById('irrRate').value / 100 / 12;
+  const termYrs = +document.getElementById('irrTerm').value;
+  const n = termYrs * 12;
+  const loanAmt = price * (1 - downPct);
+  const equity = price * downPct;
+  const monthlyPayment = loanAmt * (rate * Math.pow(1+rate,n)) / (Math.pow(1+rate,n)-1);
+  const annualDebt = monthlyPayment * 12;
+
+  const cashFlows = [-equity];
+  let rows = '';
+  let currentNOI = noi1;
+  let remainingBalance = loanAmt;
+
+  for (let y = 1; y <= hold; y++) {
+    if (y > 1) currentNOI *= (1 + growth);
+    // Approximate remaining loan balance
+    const paid = monthlyPayment * 12 * y;
+    const interestPaid = loanAmt * (+document.getElementById('irrRate').value/100) * Math.min(y, termYrs);
+    remainingBalance = Math.max(0, loanAmt - (paid - interestPaid));
+    const preTaxCF = currentNOI - annualDebt;
+    cashFlows.push(preTaxCF);
+    rows += `<tr><td>Year ${y}</td><td>${fmt(currentNOI)}</td><td>${fmt(annualDebt)}</td><td>${fmt(preTaxCF)}</td></tr>`;
+  }
+  // Exit
+  const finalNOI = noi1 * Math.pow(1+growth, hold);
+  const exitValue = finalNOI / exitCap;
+  const exitEquity = exitValue - remainingBalance;
+  cashFlows[cashFlows.length-1] += exitEquity;
+
+  // IRR approximation (Newton's method)
+  const irr = computeIRR(cashFlows);
+  const equityMultiple = (cashFlows.slice(1).reduce((a,b)=>a+b,0) + equity) / equity;
+
+  document.getElementById('irrResults').innerHTML = `
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px">
+      <div style="text-align:center;padding:16px;background:var(--accent-light);border-radius:8px">
+        <div style="font-size:28px;font-weight:700;color:var(--accent);font-family:var(--font)">${(irr*100).toFixed(1)}%</div>
+        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px">IRR</div>
+      </div>
+      <div style="text-align:center;padding:16px;background:var(--gold-light);border-radius:8px">
+        <div style="font-size:28px;font-weight:700;color:var(--gold);font-family:var(--font)">${equityMultiple.toFixed(2)}x</div>
+        <div style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px">Equity Multiple</div>
+      </div>
+    </div>
+    <div class="metric-row"><span>Purchase Price</span><span class="metric-val">${fmt(price)}</span></div>
+    <div class="metric-row"><span>Equity Invested</span><span class="metric-val">${fmt(equity)}</span></div>
+    <div class="metric-row"><span>Projected Exit Value</span><span class="metric-val">${fmt(exitValue)}</span></div>
+    <div class="metric-row"><span>Exit Equity</span><span class="metric-val">${fmt(exitEquity)}</span></div>
+    <table class="irr-table" style="margin-top:16px">
+      <tr><th>Period</th><th>NOI</th><th>Debt Service</th><th>Pre-Tax CF</th></tr>
+      ${rows}
+      <tr style="font-weight:700;background:var(--accent-light)"><td>Sale Proceeds</td><td>${fmt(exitValue)}</td><td>−${fmt(remainingBalance)}</td><td>${fmt(exitEquity)}</td></tr>
+    </table>`;
+}
+
+function computeIRR(cashFlows) {
+  let rate = 0.1;
+  for (let i = 0; i < 100; i++) {
+    let npv = 0, dnpv = 0;
+    cashFlows.forEach((cf, t) => {
+      npv += cf / Math.pow(1+rate, t);
+      dnpv -= t * cf / Math.pow(1+rate, t+1);
+    });
+    const delta = npv / dnpv;
+    rate -= delta;
+    if (Math.abs(delta) < 1e-7) break;
+  }
+  return rate;
+}
+
+// ---- Sensitivity Table ----
+function calcSensitivity() {
+  const noi = +document.getElementById('sensNOI').value;
+  const price = +document.getElementById('sensPrice').value;
+  const hold = +document.getElementById('sensHold').value;
+  const equity = +document.getElementById('sensEquity').value;
+  const capRates = [5.5, 6.0, 6.5, 7.0, 7.5, 8.0];
+  const growthRates = [0, 1, 2, 3, 4, 5];
+
+  let html = '<table class="sens-table"><tr><th>NOI Growth→<br>Cap Rate↓</th>';
+  growthRates.forEach(g => html += `<th>${g}%/yr</th>`);
+  html += '</tr>';
+
+  capRates.forEach(cap => {
+    html += `<tr><td>${cap}%</td>`;
+    growthRates.forEach(g => {
+      const finalNOI = noi * Math.pow(1 + g/100, hold);
+      const exitVal = finalNOI / (cap/100);
+      const totalReturn = (exitVal - price) + (noi * hold * 0.8); // rough CoC
+      const cocReturn = totalReturn / equity;
+      const cls = cocReturn >= 1.5 ? 'cell-good' : cocReturn >= 0.8 ? 'cell-mid' : 'cell-bad';
+      html += `<td class="${cls}">${fmt(exitVal)}</td>`;
+    });
+    html += '</tr>';
+  });
+  html += '</table>';
+  html += '<p style="font-size:12px;color:var(--muted);margin-top:8px">Values show projected exit value. Green ≥ +50% return, Yellow = moderate, Red = below threshold.</p>';
+  document.getElementById('sensResults').innerHTML = html;
+}
+
+// ---- Deal Screener ----
+function runScreener() {
+  const price = +document.getElementById('sc-price').value;
+  const rent = +document.getElementById('sc-rent').value;
+  const expenses = +document.getElementById('sc-expenses').value;
+  const vacancy = +document.getElementById('sc-vacancy').value / 100;
+  const down = +document.getElementById('sc-down').value / 100;
+  const rate = +document.getElementById('sc-rate').value / 100 / 12;
+  const term = +document.getElementById('sc-term').value * 12;
+  const loanAmt = price * (1 - down);
+  const egi = rent * (1 - vacancy);
+  const noi = egi - expenses;
+  const capRate = (noi / price) * 100;
+  const payment = loanAmt * (rate * Math.pow(1+rate,term)) / (Math.pow(1+rate,term)-1);
+  const annualDebt = payment * 12;
+  const dscr = noi / annualDebt;
+  const preTaxCF = noi - annualDebt;
+  const equity = price * down;
+  const coc = (preTaxCF / equity) * 100;
+  const grm = price / rent;
+
+  // Scoring
+  let score = 0;
+  let flags = [];
+  if (capRate >= 7) score += 25; else if (capRate >= 5) score += 12; else flags.push('Low cap rate (' + capRate.toFixed(1) + '%) — verify rent potential');
+  if (dscr >= 1.25) score += 25; else if (dscr >= 1.0) { score += 10; flags.push('DSCR ' + dscr.toFixed(2) + 'x — borderline lendable'); } else { flags.push('DSCR below 1.0 — deal doesn\'t cash flow at these terms'); }
+  if (coc >= 8) score += 25; else if (coc >= 5) score += 12; else flags.push('Low cash-on-cash (' + coc.toFixed(1) + '%) — consider price reduction or higher leverage');
+  if (grm <= 10) score += 15; else if (grm <= 14) score += 8;
+  if (vacancy <= 5) score += 10; else if (vacancy <= 10) score += 5;
+
+  const verdict = document.getElementById('verdict');
+  const type = score >= 70 ? 'go' : score >= 45 ? 'caution' : 'nogo';
+  verdict.className = 'verdict ' + type;
+  verdict.style.display = 'block';
+  document.getElementById('verdict-title').textContent = score >= 70 ? '✅ GO — Deal Looks Viable' : score >= 45 ? '⚠️ CAUTION — Proceed with Diligence' : '❌ NO-GO — Deal Has Serious Issues';
+  document.getElementById('verdict-body').textContent = score >= 70
+    ? 'Key metrics are solid. Recommend moving to full underwriting and diligence. Verify rent roll and expense assumptions.'
+    : score >= 45
+    ? 'Some metrics are weak. Deal may work with renegotiation, value-add upside, or better financing terms. Identify the fix before committing.'
+    : (flags.length ? 'Critical flags: ' + flags.join('; ') + '.' : 'Multiple metrics below threshold. Recommend pass or significant price reduction.');
+
+  document.getElementById('verdict-metrics').innerHTML = `
+    <div class="metric-row"><span>Cap Rate</span><span class="metric-val">${capRate.toFixed(2)}% <span class="badge ${capRate>=7?'badge-green':capRate>=5?'badge-yellow':'badge-red'}">${capRate>=7?'Strong':capRate>=5?'OK':'Weak'}</span></span></div>
+    <div class="metric-row"><span>DSCR</span><span class="metric-val">${dscr.toFixed(2)}x <span class="badge ${dscr>=1.25?'badge-green':dscr>=1?'badge-yellow':'badge-red'}">${dscr>=1.25?'Bankable':dscr>=1?'Marginal':'Fails'}</span></span></div>
+    <div class="metric-row"><span>Cash-on-Cash</span><span class="metric-val">${coc.toFixed(1)}% <span class="badge ${coc>=8?'badge-green':coc>=5?'badge-yellow':'badge-red'}">${coc>=8?'Good':coc>=5?'OK':'Weak'}</span></span></div>
+    <div class="metric-row"><span>GRM</span><span class="metric-val">${grm.toFixed(1)}x</span></div>
+    <div class="metric-row"><span>NOI</span><span class="metric-val">${fmt(noi)}</span></div>
+    <div class="metric-row"><span>Annual Debt Service</span><span class="metric-val">${fmt(annualDebt)}</span></div>
+    <div class="metric-row"><span>Pre-Tax Cash Flow</span><span class="metric-val" style="color:${preTaxCF>=0?'#15803d':'#dc2626'}">${fmt(preTaxCF)}/yr</span></div>
+    <div class="metric-row"><span>Deal Score</span><span class="metric-val">${score}/100</span></div>`;
+}
+
+// ---- FAQ Accordion ----
+function toggleFaq(el) {
+  const answer = el.nextElementSibling;
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-q.open').forEach(q => {
+    q.classList.remove('open');
+    q.nextElementSibling.classList.remove('open');
+  });
+  if (!isOpen) { el.classList.add('open'); answer.classList.add('open'); }
+}
+
+// ---- Contact Form (Formspree) ----
+function handleDealSubmit(e) {
+  e.preventDefault();
+  const form = document.getElementById('deal-form');
+  const data = new FormData(form);
+  if (form.action.includes('YOUR_FORM_ID')) {
+    form.style.display = 'none';
+    document.getElementById('deal-success').classList.add('show');
+    const name = data.get('name'), email = data.get('email'), service = data.get('service'), prop = data.get('property') || '';
+    const mailto = `mailto:deals@mettarealtypartners.com?subject=Deal Inquiry from ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nService: ${service}\nProperty: ${prop}`)}`;
+    setTimeout(() => { window.location.href = mailto; }, 800);
+    return;
+  }
+  fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+    .then(() => { form.style.display = 'none'; document.getElementById('deal-success').classList.add('show'); })
+    .catch(() => { form.style.display = 'none'; document.getElementById('deal-success').classList.add('show'); });
+}
+
+// ---- AI Chat ----
+const cre_kb = {
+  'cap rate': 'Cap rate (capitalization rate) = NOI ÷ Property Value. It measures a property\'s income potential independent of financing. In 2025, 6-7% is typical for most US markets. Class A urban assets may be 4-5%, value-add suburban 7-9%. Higher cap rate = higher yield but typically more risk.',
+  'dscr': 'DSCR (Debt Service Coverage Ratio) = NOI ÷ Annual Debt Service. Lenders require ≥1.25x on most commercial loans — meaning the property generates 25% more income than needed to cover the mortgage. Below 1.0x means the deal loses money before equity returns.',
+  'noi': 'NOI (Net Operating Income) = Effective Gross Income − Operating Expenses. It excludes mortgage payments, depreciation, and income taxes. NOI is the foundation of all CRE valuation — cap rate, DSCR, and GRM all use it.',
+  'irr': 'IRR (Internal Rate of Return) is the annualized return on your total investment, including cash flows AND the exit sale. Target IRR depends on strategy: Core (6-9%), Core-Plus (9-12%), Value-Add (12-18%), Opportunistic (18%+). IRR accounts for the time value of money — earlier cash flows are worth more.',
+  'grm': 'GRM (Gross Rent Multiplier) = Price ÷ Gross Annual Rent. It\'s a quick screening metric — lower GRM means better value relative to rent. Typical ranges: Multifamily 6-12x, Retail 8-14x, Industrial 7-11x. GRM doesn\'t account for expenses, so always follow up with NOI analysis.',
+  'cash on cash': 'Cash-on-cash return = Annual Pre-Tax Cash Flow ÷ Total Cash Invested. It measures your actual cash yield on the money you put in (down payment + closing costs). Target: 7-12% in today\'s market. Unlike IRR, it ignores appreciation and equity paydown.',
+  '1031': 'A 1031 exchange lets you defer capital gains tax when selling an investment property by reinvesting into a "like-kind" property. Key rules: 45 days to identify replacement property, 180 days to close, must be investment/business property (not primary residence), equal or greater value required.',
+  'value add': 'Value-add CRE investing means buying underperforming assets with upside potential — below-market rents, deferred maintenance, vacancy, or mismanagement — then improving them to force appreciation. Higher risk than core, higher target returns (12-18% IRR).',
+  'net lease': 'In a net lease, the tenant pays some or all of the property expenses (taxes, insurance, maintenance) in addition to base rent. Triple net (NNN) has the tenant pay all three. NNN properties trade at lower cap rates because landlord risk is minimal — popular for passive investors.',
+  'ltv': 'LTV (Loan-to-Value) = Loan Amount ÷ Property Value. Lenders cap LTV at 65-80% for commercial (vs 95%+ for residential). Lower LTV = less risk for lender = better rate. Most CRE deals use 70-75% LTV.',
+  'sensitivity': 'Sensitivity analysis shows how your returns change as key assumptions move — cap rate, rent growth, vacancy, exit timing. Always stress-test a deal at worst-case assumptions. If it still works at 10% vacancy and 0% rent growth, it\'s a solid deal.',
+  'due diligence': 'CRE due diligence covers: (1) Financial — rent roll, trailing 12 financials, CAM reconciliations; (2) Physical — inspection, cap ex assessment, environmental Phase I; (3) Legal — title, leases, zoning, liens; (4) Market — comps, absorption, supply pipeline. Budget 30-60 days.',
+  'multifamily': 'Multifamily (2+ residential units) is the most popular CRE asset class. Valued by cap rate and rent/unit. Key metrics: occupancy (target 95%+), rent/sqft vs market, expense ratio (35-50% of gross rents), cap ex reserves ($1,500-3,000/unit/year).',
+};
+
+function toggleChat() {
+  const win = document.getElementById('chatWindow');
+  win.classList.toggle('open');
+  document.querySelector('.chat-badge').style.display = 'none';
+}
+
+function quickSend(msg) {
+  document.getElementById('chatInput').value = msg;
+  sendChat();
+  document.getElementById('quickBtns').style.display = 'none';
+}
+
+function sendChat() {
+  const input = document.getElementById('chatInput');
+  const msg = input.value.trim();
+  if (!msg) return;
+  input.value = '';
+  addMsg(msg, 'user');
+  setTimeout(() => {
+    const reply = getReply(msg.toLowerCase());
+    addMsg(reply, 'agent');
+  }, 700);
+}
+
+function addMsg(text, who) {
+  const msgs = document.getElementById('chatMessages');
+  const now = new Date().toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'});
+  const div = document.createElement('div');
+  div.className = `msg msg-${who}`;
+  div.innerHTML = `<div class="msg-bubble">${text}</div><div class="msg-time">${now}</div>`;
+  msgs.appendChild(div);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function getReply(msg) {
+  for (const [key, val] of Object.entries(cre_kb)) {
+    if (msg.includes(key)) return val;
+  }
+  if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey'))
+    return 'Hi there! I can explain any CRE concept — cap rate, DSCR, IRR, 1031 exchanges — or help you think through a deal. What are you working on?';
+  if (msg.includes('deal') || msg.includes('analyze') || msg.includes('screen'))
+    return 'Use the Deal Screener at the top of the page for an instant go/no-go assessment. Enter purchase price, rents, expenses, and financing — it will score the deal across cap rate, DSCR, and cash-on-cash.';
+  if (msg.includes('contact') || msg.includes('email') || msg.includes('talk'))
+    return 'Submit a deal through the form on this page, or email us at deals@mettarealtypartners.com. We respond to all serious inquiries within 24 hours.';
+  if (msg.includes('market') || msg.includes('2025') || msg.includes('rate'))
+    return 'In 2025, the CRE market is in a rate-reset period. Cap rates have expanded 100-200bps from 2021-22 lows. Multifamily seeing best fundamentals. Office remains stressed. Industrial and net lease hold firm. Financing improved — 10yr treasuries around 4.5%, SOFR-based loans competitive.';
+  if (msg.includes('fee') || msg.includes('cost') || msg.includes('charge'))
+    return 'Our engagement structure varies by service. Deal analysis reports start at $1,500. Full buyer representation is typically 1-2% of purchase price, paid at close. Initial consultations are free — submit your deal and we\'ll scope it.';
+  return 'Great question. I can speak to: cap rate, DSCR, NOI, IRR, GRM, cash-on-cash, 1031 exchanges, value-add investing, net lease, LTV, sensitivity analysis, due diligence, and multifamily fundamentals. Which would help most?';
+}
+
+// ---- Init (run calcs on load) ----
+window.onload = () => { calcCap(); calcDSCR(); calcCoC(); calcGRM(); };
+</script>
+<div style="max-width:900px;margin:16px auto;padding:16px;text-align:center;font-size:11px;color:#999;">
+  <a href="privacy.html" style="color:#666;">Privacy Policy</a> |
+  <a href="#terms" style="color:#666;">Terms of Use</a> |
+  Property of <a href="https://legacybridgealliancegroup.com" style="color:#666;">Legacy Bridge Alliance Group</a>. All rights reserved.
+</div>
+</body>
+</html>
