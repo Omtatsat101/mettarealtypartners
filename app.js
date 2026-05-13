@@ -67,32 +67,61 @@
   // ─── Contact form ────────────────────────────────────────
   var form = document.getElementById("contact-form");
   if (form) {
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
       var status = document.getElementById("cm-status");
-      var key = form.querySelector('[name="access_key"]').value;
-      if (!key || key.indexOf("REPLACE_WITH") === 0) {
-        if (status) {
-          status.textContent = "Form not configured yet — please email hey@mettarealtypartners.com directly.";
-          status.className = "cm-status is-error";
-        }
-        return;
-      }
+      var cfg = window.RP_CONFIG || {};
+      if (form.botcheck && form.botcheck.checked) return;
+
       if (status) { status.textContent = "Sending…"; status.className = "cm-status"; }
       var fd = new FormData(form);
-      fetch(form.action, { method: "POST", body: fd })
-        .then(function (r) { return r.json(); })
-        .then(function (data) {
-          if (data && data.success) {
-            if (status) { status.textContent = "Sent. I'll reply within a day."; status.className = "cm-status is-ok"; }
-            form.reset();
-          } else {
-            if (status) { status.textContent = (data && data.message) || "Something broke — please email directly."; status.className = "cm-status is-error"; }
-          }
-        })
-        .catch(function () {
-          if (status) { status.textContent = "Network error — please email directly."; status.className = "cm-status is-error"; }
-        });
+      var lead = {
+        name: fd.get("name"),
+        email: fd.get("email"),
+        phone: fd.get("phone") || null,
+        company: null,
+        role: fd.get("role") || null,
+        message: fd.get("message") || null,
+        source: "contact_realty",
+        domain: "mettarealtypartners.com",
+        user_agent: navigator.userAgent,
+        referrer: document.referrer || null,
+        metadata: { page: location.pathname }
+      };
+
+      var results = await Promise.allSettled([
+        cfg.SUPABASE_URL ? fetch(cfg.SUPABASE_URL + "/rest/v1/leads", {
+          method: "POST",
+          headers: {
+            "apikey": cfg.SUPABASE_ANON_KEY,
+            "Authorization": "Bearer " + cfg.SUPABASE_ANON_KEY,
+            "Content-Type": "application/json",
+            "Prefer": "return=minimal"
+          },
+          body: JSON.stringify(lead)
+        }) : Promise.reject("supabase-not-configured"),
+        (function(){
+          var w = new FormData();
+          w.append("access_key", cfg.WEB3FORMS_KEY || "REPLACE_WITH_WEB3FORMS_KEY_REALTY");
+          w.append("subject", "mettarealtypartners.com — new inquiry from " + lead.name);
+          w.append("from_name", "mettarealtypartners.com");
+          w.append("name", lead.name);
+          w.append("email", lead.email);
+          w.append("phone", lead.phone || "");
+          w.append("role", lead.role || "");
+          w.append("message", lead.message || "");
+          return fetch("https://api.web3forms.com/submit", { method: "POST", body: w });
+        })()
+      ]);
+
+      var anyOk = results.some(function(r){ return r.status === "fulfilled" && r.value && r.value.ok; });
+      if (anyOk) {
+        if (status) { status.textContent = "Sent. I'll reply within a day."; status.className = "cm-status is-ok"; }
+        form.reset();
+        if (window.gtag) gtag("event", "contact_submit", { domain: "mettarealtypartners.com", role: lead.role });
+      } else {
+        if (status) { status.textContent = "Something broke. Email hey@mettarealtypartners.com directly."; status.className = "cm-status is-error"; }
+      }
     });
   }
 })();
