@@ -105,6 +105,7 @@
           w.append("access_key", cfg.WEB3FORMS_KEY || "REPLACE_WITH_WEB3FORMS_KEY_REALTY");
           w.append("subject", "mettarealtypartners.com — new inquiry from " + lead.name);
           w.append("from_name", "mettarealtypartners.com");
+          if (lead.email) w.append("replyto", lead.email);
           w.append("name", lead.name);
           w.append("email", lead.email);
           w.append("phone", lead.phone || "");
